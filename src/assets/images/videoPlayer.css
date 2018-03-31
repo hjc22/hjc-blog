@@ -1,0 +1,9 @@
+
+.videoBg{
+  width: 100%;
+}
+.videoWrap{
+  width: 100%;
+  /* height: 500px; */
+  overflow: hidden;
+}

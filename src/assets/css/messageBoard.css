@@ -1,0 +1,18 @@
+.msgTitle{
+  font-size: 18px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom:10px;
+  color:#555;
+  font-weight: normal;
+}
+
+.messageBoard{
+  composes: modulePanel from global;
+  min-height: 400px;
+}
+
+.pagination{
+  display:flex;
+  justify-content:center;
+  margin:40px 0 20px;
+}

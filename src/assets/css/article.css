@@ -1,0 +1,517 @@
+.articleItem{
+  padding: 56px 8% 36px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  margin-top: 20px;
+  position: relative;
+  min-height: 800px;
+}
+.itemImg{
+  width: 100%;
+  margin-top: 26px;
+}
+.articleList{
+  margin-bottom: 0;
+}
+.itemText{
+  color:#1a1a1a;
+  line-height: 28px;
+  font-size: 15px;
+  padding-top: 20px;
+}
+.itemText p{
+  /* text-indent: 20px; */
+  margin:10px 0;
+}
+.itemText img{
+  max-width: 100%;
+  margin: 24px 0;
+}
+.itemTitle{
+  font-size: 18px;
+  color:#222;
+  font-weight: bold;
+  text-align: center;
+}
+.itemHead{
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 1px dotted #e6e6e6;
+}
+.itemMore{
+  height: 28px;
+  border-radius: 30px;
+  width: 100px;
+  background:#0cc0fb;
+  color: #fff;
+  font-size: 13px;
+  transition: all .3s;
+}
+.itemMore:active{
+  opacity: .7;
+}
+.itemMore:hover{
+  opacity: .3;
+}
+.seeBtnBox{
+  text-align: center;
+}
+.itemHead{
+  color:#666;
+  font-size: 13px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+
+}
+.itemDate{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  /* flex: 0 0 auto; */
+
+}
+.itemCircle{
+  /* content: ''; */
+  width: 4px;
+  height: 4px;
+  background: #b1b1b1;
+  border-radius: 100%;
+  margin: 0 10px 3px;
+  /* position: absolute; */
+  /* margin-left: 10%; */
+  display: inline-block;
+  /* bottom:5px; */
+}
+.itemTag{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  flex: 0 0 auto;
+}
+.itemTagName{
+  color:#ffbcf5;
+  margin-left: 2%;
+}
+.readNum{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  /* flex: 1 0 auto; */
+}
+.autor{
+  /* flex: 1 0 auto; */
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.monthTitle{
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  top:10px;
+  left:3%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 2px 1px 0 rgba(218,216,219,0.8);
+}
+.monthTitle::before{
+  content: '';
+  background: linear-gradient(#1fc4fa, #209eeb);
+  width: 100%;
+  height: 35px;
+  left:0;
+  position: absolute;top:0;
+
+}
+.monthTitle::after{
+  content: '';
+  background: linear-gradient(#0abefb, #09c0fc);
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.monthText{
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  line-height: 1;
+  font-size: 36px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.dayText{
+  position: relative;
+  z-index: 10;
+  color: #a4f4ff;
+  line-height: 1;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.awardBox{
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px dotted #e6e6e6;
+}
+.awardBox button{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #ffa4f3;
+  color: #fff;
+  margin: 0 4%;
+  box-shadow: 0 4px 10px rgba(255, 163, 244, 0.5);
+  transition: all .2s;
+  vertical-align: top;
+
+}
+
+
+.awardBox button:active{
+  background: #fd69ed;
+}
+.awardBtn{
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+}
+.likeBtn{
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.likeNum{
+  display: block;
+  font-size: 12px;
+
+}
+.likeIcon{
+  font-size: 20px;
+  line-height: 1;
+}
+
+.qrPayPanel{
+  position: absolute;
+
+  bottom:70px;
+  background:#fff;
+  border: 1px solid #ffa4f3;
+  width: 350px;
+  height: 200px;
+  border-radius: 14px;
+  left:50%;
+  transform: translateX(-50%);
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.menuArrow{
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  bottom:-16px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.menuArrow::after{
+  content:'';
+  position: absolute;
+  left:50%;
+  top:-1px;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color:#fff;
+}
+.menuArrow::before{
+  content:'';
+  position: absolute;
+  left:50%;
+  top:0;
+  transform: translateX(-50%);
+  border: 8.4px solid transparent;
+  border-top-color:#ffa4f3;
+}
+.smallInputBox .replyInput{
+  background: #eaeaea;
+  border-color: #E0E0E4;
+}
+.qrImgBox{
+  display: inline-flex;
+  text-align: center;
+  flex-direction: column;
+  color:#575757;
+  font-size: 14px;
+}
+.qrImg{
+  width:100px;
+  flex:0;
+  margin-bottom: 14px;
+
+}
+.qrPayImgs{
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+.nearArticle{
+  color: #777;
+  margin:20px 0 36px;
+}
+.showItem{
+  line-height: 30px;
+}
+.showItem a{
+  color: #777;
+}
+
+.commentHead{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.headTit{
+  font-size: 18px;
+  margin:0;
+  font-weight: bold;
+}
+.commentNum{
+  color:#0cc0fb;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 4px;
+
+}
+.headRight{
+  font-size: 13px;
+}
+.headRight span{
+  display: inline-block;
+  vertical-align: baseline;
+
+}
+.loginAlert{
+  font-size: 14px;
+  color: #555;
+
+}
+.loginBtn{
+  color: #0cc0fb;
+  cursor: pointer;
+}
+
+
+.userImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.commentItem{
+  display: flex;
+  flex:1;
+  padding: 30px 0 30px;
+
+  border-bottom: 1px solid #f6f6f6;
+
+}
+.itemTop{
+  display: flex;
+  flex:1;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+}
+.itemRight{
+  display: flex;
+  flex:1;
+  margin-left: 5%;
+  flex-direction: column;
+}
+.itemMid{
+
+}
+.comItemName{
+  color:#0cc0fb;
+  flex:1;
+  display: inline-flex;
+  align-items: center;
+}
+.comItemDate{
+  color:#8590a6;
+  font-size: 13px;
+}
+.comItemText{
+  color:#444;
+  margin-bottom: 0;
+  line-height: 22px;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.gradeIcon{
+  display: inline-flex;
+  height: 20px;
+  min-width: 62px;
+  border-radius: 20px;
+  border: 1px solid #0cc0fb;
+  margin-left: 3%;
+  line-height: 1;
+  position: relative;
+  font-size: 12px;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* padding: 0 4px; */
+
+}
+.gradeIcon::before{
+  content: attr(grade);
+  /* position: absolute;
+  left:0;
+  top:0; */
+  border-radius: 100%;
+  width: 19px;
+  height: 19px;
+  background: #0cc0fb;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  line-height: 1;
+  margin-right: 6%;
+}
+.gradeIcon[grade='1']{
+
+}
+
+.replyList{
+  background: #f2f2f2;
+  padding: 14px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+.replyRightBtns{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.replyInputBox{
+
+  padding: 20px 0 10px;
+  color:#8590a6;
+}
+.replyInput{
+  width: 100%;
+  background: #f6f6f6;
+  border: 1px solid #ebebeb;
+  padding: 5px 10px;
+  transition: background .2s;
+  border-radius: 3px;
+  color:#333;
+  height: 34px;
+}
+
+.replyInput:focus{
+  background: #fff;
+  outline: 1px solid #0cc0fb;
+}
+.replyIconStyle{
+  font-size: 14px;
+  margin-right: 3px;
+}
+.replyLikeBtn{
+  margin: 0 10px;
+
+}
+
+.inputBtns{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin-top: 14px;
+}
+.commentBtn{
+  background: #0cc0fb;
+  width: 50px;
+  height: 28px;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: 30px;
+  transition: all .2s;
+}
+
+.replyInputPanel{
+  display: none;
+}
+.openInput{
+  display: block;
+}
+.commentSubmitBox{
+  display: flex;
+  align-items: center;
+}
+
+.smallBtns{
+  display: flex;
+  justify-content: flex-end;
+  color:#8e8e8e;
+}
+.smallInputBtns{
+  display: flex;
+  justify-content: flex-end;
+}
+.smallInputBox{
+  display: none;
+  padding: 20px 0 10px;
+}
+
+.smallCancel{
+  color:#8e8e8e;
+}
+.smallInputBtns{
+  padding: 10px 0;
+}
+@media (min-width: 1000px){
+
+  .awardBox button:hover{
+    background: #fe85f1;
+  }
+
+  .awardBox button:hover .qrPayPanel{
+    display: block;
+  }
+
+  .commentBtn:hover{
+    background: #08afe4;
+  }
+}
+
+.commentBtn:active{
+  background: #089ccb;
+}

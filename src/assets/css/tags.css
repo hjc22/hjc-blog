@@ -1,0 +1,30 @@
+.tagList{
+  composes: modulePanel from global;
+  /* min-height: 400px; */
+}
+.msgTitle{
+  font-size: 18px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom:10px;
+  color:#555;
+  font-weight: normal;
+}
+.tagNames{
+  margin: 10px 0 0;
+  display: flex;
+}
+.tagItem{
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all .2s;
+  padding: 4px 10px;
+  margin: 10px 0;
+}
+.tagItem.active{
+  background: #0cc0fb;
+  color:#fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

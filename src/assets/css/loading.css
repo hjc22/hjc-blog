@@ -1,0 +1,19 @@
+
+.errText{
+  color:#999;
+  font-size: 12px;
+}
+
+.loading{
+  text-align: center;
+}
+
+.spinStyle{
+  padding: 30px 0;
+}
+.loading i{
+  background-color: #0cc0fb;
+}
+.loadingWhite i{
+  background-color: #fff;
+}

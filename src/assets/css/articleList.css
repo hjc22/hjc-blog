@@ -1,0 +1,163 @@
+
+.articlesWrap{
+
+}
+
+.articleItem{
+  padding: 56px 12% 30px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  margin-top: 20px;
+  position: relative;
+}
+.itemImg{
+  width: 100%;
+  margin-top: 26px;
+}
+.articleList{
+  margin-bottom: 0;
+}
+.itemText{
+  color:#2f2f2f;
+  line-height: 30px;
+  margin-top: 30px;
+  text-indent: 20px;
+}
+.itemTitle{
+  font-size: 18px;
+  color:#222;
+  font-weight: bold;
+  text-align: center;
+}
+.itemHead{
+  text-align: center;
+}
+.itemMore{
+  height: 28px;
+  border-radius: 30px;
+  width: 100px;
+  background:#0cc0fb;
+  color: #fff;
+  font-size: 13px;
+  transition: all .3s;
+  box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.2);
+}
+.itemMore a{
+  color: #fff;
+  line-height: 1;
+}
+.itemMore:active{
+  opacity: .7;
+}
+.itemMore:hover{
+  opacity: .3;
+}
+.seeBtnBox{
+  text-align: center;
+}
+.itemHead{
+  color:#666;
+  font-size: 13px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+
+}
+.itemDate{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  /* flex: 0 0 auto; */
+
+}
+.itemCircle{
+  /* content: ''; */
+  width: 4px;
+  height: 4px;
+  background: #b1b1b1;
+  border-radius: 100%;
+  margin: 0 10px 3px;
+  /* position: absolute; */
+  /* margin-left: 10%; */
+  display: inline-block;
+  /* bottom:5px; */
+}
+.itemTag{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  flex: 0 0 auto;
+}
+.itemTagName{
+  color:#ffbcf5;
+  margin-left: 2%;
+}
+.readNum{
+  /* margin-right: 3%;
+  padding-right: 4%; */
+  /* position: relative; */
+  /* flex: 1 0 auto; */
+}
+.autor{
+  /* flex: 1 0 auto; */
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.monthTitle{
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  top:10px;
+  left:3%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 2px 1px 0 rgba(218,216,219,0.8);
+}
+.monthTitle::before{
+  content: '';
+  background: linear-gradient(#1fc4fa, #209eeb);
+  width: 100%;
+  height: 35px;
+  left:0;
+  position: absolute;top:0;
+
+}
+.monthTitle::after{
+  content: '';
+  background: linear-gradient(#0abefb, #09c0fc);
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.monthText{
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  line-height: 1;
+  font-size: 36px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.dayText{
+  position: relative;
+  z-index: 10;
+  color: #a4f4ff;
+  line-height: 1;
+  margin-top: 4px;
+  font-size: 14px;
+}

@@ -1,0 +1,220 @@
+ul,li{
+  list-style: none;
+}
+*{
+  margin: 0;
+  padding: 0
+}
+button{
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+a{
+  color: inherit;
+  text-decoration: none!important;
+}
+
+.backupIcon{
+  background: #0cc0fb;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color:#fff;
+  font-size: 26px;
+  text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 2px 0px #ffa4f3;
+  transition: all .2s;
+}
+.backupIcon:active{
+  opacity: .6;
+}
+:global .globalColor {
+  color: #0cc0fb;
+}
+
+:global .globalBg {
+  background-color: #0cc0fb;
+}
+:global .globalTitle {
+   color:#2d2e30;
+   font-size: 18px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #e1e1e1;
+}
+
+:global .globalSeeMore {
+   text-align: center;
+   color:#0cc0fb;
+}
+:global .globalSeeMore button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+:global .globalModule {
+  padding: 20px 6%;
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+
+  /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1) */
+}
+
+:global .slick-list{
+  border-radius: 14px;
+}
+.contentWarp{
+  position: relative;
+  overflow: hidden;
+  background-color: #0064c6;
+}
+.startTopBg{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 950px;
+  background: url(../images/start_top_bg_02.jpg) 50% 50% / cover no-repeat;
+  /* background-attachment:fixed */
+}
+
+/* :global(.ant-pagination-prev:focus .ant-pagination-item-link, .ant-pagination-next:focus .ant-pagination-item-link, .ant-pagination-prev:hover .ant-pagination-item-link, .ant-pagination-next:hover .ant-pagination-item-link) {
+  color:#0cc0fb;
+  border-color: #0cc0fb;
+
+} */
+
+:global .ant-pagination-item{
+  border-radius: 100%!important;
+}
+:global .ant-pagination-item-active{
+  color:#0cc0fb!important;
+  border-color: #0cc0fb!important;
+}
+:global .ant-pagination-item-active a{
+  color:#0cc0fb!important;
+}
+:global .ant-pagination-item-link{
+  border-radius: 100%!important;
+}
+
+:global .show{
+  display: block!important;
+}
+:global .hide{
+  display: none!important;
+}
+
+:global .modulePanel{
+  background: #fff;
+  padding: 20px 8% 20px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  /* margin-top: 20px; */
+  position: relative;
+}
+
+.contentWrap{
+  margin-top: 40px;
+}
+
+
+.offset{
+  margin-left: 2%;
+}
+.startLeft{
+
+}
+
+.startRight{
+  margin-left: 2%;
+  margin-bottom: 40px;
+}
+
+.inputItem input{
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid #ebebeb;
+}
+.inputItem{
+  margin-bottom: 10px;
+
+}
+
+.inputItem input::-webkit-input-placeholder {
+  color:#8590a6;
+}
+
+.loginBtnBox button{
+  height: 36px;
+  background: #0cc0fb;
+  width: 100%;
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 4px;
+  transition: all .2s;
+
+}
+
+.loginModal{
+  padding: 30px 10px 0;
+}
+.regBtn{
+  color:#0cc0fb;
+}
+
+.mailInput{
+  height: 0;
+  transition: all .4s;
+  overflow: hidden;
+}
+.mailShow{
+  height: 48px;
+}
+.noAccount{
+  height: 60px;
+  line-height: 60px;
+  color:#555;
+  text-align: center;
+  font-size: 14px;
+}
+.iconQq{
+  fill:#8590a6;
+}
+.otherLogin{
+  text-align: center;
+  padding: 30px 0;
+}
+@media (min-width: 1000px){
+
+  .loginBtnBox button:hover{
+    background: #09b2e9;
+  }
+}
+.loginBtnBox button:active{
+  background: #08a2d4;
+}
+
+@media (max-width: 768px){
+  .startLeft{
+    order:2
+  }
+
+  .startRight{
+    margin-left: 0;
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .contentWrap{
+    margin-top: 20px;
+    /* padding-bottom: 20px; */
+  }
+
+}

@@ -1,0 +1,146 @@
+.musicPlayer{
+  background: #fff;
+  border-radius: 14px;
+  height:340px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1)
+}
+.head{
+  height: 60px;
+  background: #00c1fe;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  color:#fff;
+}
+.imgBox{
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.imgBg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  filter: blur(6px);
+
+}
+.footer{
+  height: 60px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 0 5% 0 10%;
+  background: #f4f4f4;
+}
+.songImg{
+  width: 30%;
+  border-radius: 100%;
+  border: 8px solid rgba(154, 154, 154, 0.5);
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 100;
+}
+.songPlay{
+  animation:songplay 20s infinite linear;
+  animation-fill-mode: backwards;
+}
+.songPaused{
+  animation-play-state: paused;
+}
+@keyframes songplay {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.playBtn{
+  color:#00c1fe;
+  font-size: 40px;
+  margin-right: 10%;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+.footerSonger{
+  font-size: 12px;
+  color:#838383;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.footerSongName{
+  font-size: 15px;
+  color:#333;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.headPlayBtn{
+
+  font-size: 18px;
+  margin: 0 6%;
+  transition: all .2s;
+
+}
+.headPause{
+  font-size: 24px;
+}
+.headBtn{
+  font-size: 18px;
+}
+.headBtn:active,.headList:active,.headPlayBtn:active,.playBtn:active{
+  color:#83dbf7;
+  transition: all .3s;
+}
+.headName{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 30%;
+  margin: 0 8%;
+  cursor: pointer;
+
+}
+.headList{
+  font-size: 28px;
+  /* margin-left: 40%; */
+  cursor: pointer;
+}
+
+.voiceIcon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: all .3s;
+
+}
+.voiceIcon:active{
+  opacity: .7;
+}
+.voiceIcon[type='2']{
+  background: url(../images/voice_2.png) 50% 50% / 20px no-repeat;
+}
+.voiceIcon[type='1']{
+  background: url(../images/voice_1.png) 50% 50% / 20px no-repeat;
+}
+.voiceIcon[type='0']{
+  background: url(../images/voice_0.png) 50% 50% / 20px no-repeat;
+}
+
+.headRight{
+  display: flex;
+  align-items: center;
+  flex:1;
+  justify-content: space-between;
+}

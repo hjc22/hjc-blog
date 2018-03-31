@@ -1,0 +1,273 @@
+
+
+.header{
+  /* padding-left: 14px; */
+  height:60px;
+  align-items: center;
+  display: flex;
+  color:#222;
+  justify-content: space-between;
+  background: rgba(255,255,255,.9);
+}
+.editName{
+  font-size: 20px;
+}
+.titleInput{
+  font-size: 32px;
+  height: 44px;
+  color:#000;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.titleInput::-webkit-input-placeholder{
+    color:#b9b9b9;
+}
+.headWrap{
+  border-bottom: 1px solid #ececec;
+}
+
+.contentWarp{
+  padding: 40px 0;
+}
+
+.rightBtn{
+  padding: 0 20px;
+  height: 34px;
+  border: 1px solid #b3b3b3;
+  color:#b3b3b3;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: all .2s;
+}
+.selectTag{
+  margin-top: 20px;
+}
+.rightBtn.btnActive{
+  border-color: #0cc0fb;
+  color:#0cc0fb;
+}
+.titleImgBox{
+  margin: 30px 0 30px;
+  height: 200px;
+  background: #f7f8f9;
+  position: relative;
+  /* justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  flex-direction: column; */
+}
+.titleImgAction{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+}
+.fileInput{
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.iconCamera{
+  font-size: 40px;
+  color:#b4b4b4;
+  opacity: .8;
+}
+
+.artPhoto{
+  font-size: 14px;
+  color:#b4b4b4;
+  margin-top: 4px;
+  display: block;
+  /* position: absolute; */
+
+}
+.artPhotoBox{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+}
+.editContent{
+  /* min-height: 400px; */
+  font-size: 16px;
+  /* border-bottom: 1px solid rgb(235, 235, 235); */
+  /* padding: 20px; */
+}
+.entryContent{
+    composes:editContent;
+    /* border-right: 1px solid rgb(235, 235, 235); */
+    position: relative;
+    /* background: #f90 */
+}
+.outerContent{
+  composes:editContent;
+  /* background: #ececec; */
+
+}
+.toolsBar{
+  display: flex;
+  height:40px;
+  align-items: center;
+  border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 0 10px;
+  /* margin-bottom: 20px; */
+}
+.barLeft{
+  display: flex;
+  align-items: center;
+}
+.entryEdit{
+  outline: none;
+  min-height: 400px;
+  padding: 30px 0 20px;
+}
+.outerShow{
+  outline: none;
+  padding: 30px 10px 20px;
+}
+.entryPlaceholder{
+  color: #b3b3b3;
+  position: absolute;
+  top:30px;
+  z-index: -1;
+}
+.toolItem{
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+}
+.toolLine{
+  width: 1px;
+  height: 24px;
+  background: #ececec;
+  margin: 0 8px;
+}
+.toolbtnItem{
+  display:flex;
+  align-items: center;
+
+}
+.toolItem:hover{
+  background: #ececec;
+}
+.toolItem .Zi{
+  fill: #8590a6;
+}
+
+.uploadPhoto{
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: none;
+}
+.preloadShowContent{
+  min-height: 600px;
+}
+.linkContent{
+  box-sizing: border-box;
+
+}
+.linkContent input{
+  width: 100%;
+  outline: none;
+  height: 40px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+
+.linkContent input::-webkit-input-placeholder{
+    color:#b9b9b9;
+}
+
+.titleImgShow{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.titleImgBar{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  height: 42px;
+  background: rgba(0,0,0,.75);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.titleImgBar button{
+  margin: 0 14px;
+}
+.showBarBtn{
+  font-size: 22px;
+  color:#fff;
+  line-height: 1;
+}
+.titleLoading{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  z-index: 100;
+}
+:global .titlePhoto-enter {
+  opacity: 0;
+}
+
+:global .art-show{
+  display: block;
+}
+:global .flex-show{
+  display: flex;
+}
+:global .art-hide{
+  display: none;
+}
+
+:global .titlePhoto-enter {
+  opacity: 0;
+  /* transform: scale(1); */
+  transform: scale(0);
+  transition: all .3s ease-out;
+}
+:global .titlePhoto-enter-active{
+  opacity: 1;
+  transform: scale(1);
+}
+
+:global .titlePhoto-leave {
+  opacity: 1;
+  transform: scale(1);
+}
+:global .titlePhoto-leave.titlePhoto-leave-active {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 300ms ease-out;
+}
+
+pre{
+    white-space: pre;
+    background: #EEE;
+    word-break: break-word;
+}
+pre span{
+  word-break: break-word;
+}

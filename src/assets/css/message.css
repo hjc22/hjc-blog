@@ -1,0 +1,24 @@
+
+.message{
+  composes: modulePanel from global;
+  min-height: 400px;
+}
+.msgTitle{
+  font-size: 18px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom:10px;
+  color:#555;
+  font-weight: normal;
+}
+.msgItem{
+  padding: 20px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.itemAction{
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0 0;
+  font-size: 13px;
+  color:#0cc0fb;
+}

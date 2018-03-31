@@ -1,0 +1,38 @@
+
+.mySetting{
+  composes: modulePanel from global;
+}
+
+.settingHead{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userImgBox{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0cc0fb;
+  border-radius: 100%;
+}
+.userImgBox img{
+  width: 100%;
+  border-radius: 100%;
+
+}
+.userName{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.settingTitle{
+  font-size: 18px;
+  color:#1a1a1a;
+  line-height:  60px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ececec;
+}
