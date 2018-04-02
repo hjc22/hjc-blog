@@ -167,7 +167,7 @@ export default class Edit extends Component {
                   <span className={cs.editName}>{editStore.preloadShow?'预览文章':'写文章'}</span>
                   <div >
                     <button className={cs.rightBtn +' '+ isArt} onClick={() => this.preloadShow()}>{editStore.preloadShow?'关闭':'预览'}</button>
-                    <button className={cs.rightBtn + ' '+ isArt} onClick={() => editStore.editArticle(this.refs.titleImgInput)}>发布</button>
+                    <button className={cs.rightBtn + ' '+ isArt} onClick={() => editStore.editArticle(this.refs.titleImgInput,this.refs.entryContent)}>发布</button>
                   </div>
                 </div>
 
@@ -179,7 +179,7 @@ export default class Edit extends Component {
           <Col xl={{ span:14 }} lg={{ span: 14 }} md={{span:22}}  sm={{ span:22 }} xs={{span:22}}>
             <div className={cs.inputContent +' '+isHideInput}>
               <div className={cs.artTitle}>
-                <input className={cs.titleInput} placeholder='请输入标题' onChange={(e) => editStore.setTitle(e.target.value)}/>
+                <input className={cs.titleInput} value={editStore.articleTitle} placeholder='请输入标题' onChange={(e) => editStore.setTitle(e.target.value)}/>
               </div>
               <div className={cs.selectTag}>
                 <span></span>

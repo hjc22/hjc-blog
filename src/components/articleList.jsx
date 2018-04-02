@@ -74,7 +74,7 @@ const Item  = ( props,i ) => {
          <span className={cs.autor}>{props.autor}提供</span>
       </div>
       { props.titleImg?<img src={props.titleImg} className={cs.itemImg} alt='article-img'/>:''}
-      <p className={cs.itemText}>{props.articleText.substring(0,100)}{props.articleText.length>100?'...':''}</p>
+      <p className={cs.itemText}>{props.simpleText}</p>
       <div className={cs.seeBtnBox}>
         <button className={cs.itemMore}><Link to={`/article/${props.articleId}`}>阅读全文</Link></button>
       </div>

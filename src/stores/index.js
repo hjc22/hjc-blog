@@ -438,14 +438,16 @@ class EditStore {
     this.articleTitle = ''
     this.tagId = 1
   }
-  @action editArticle(input){
+  @action editArticle(input,entryInput){
 
     const { articleText,titleImg,articleTitle,tagId} = this
 
     if(!articleTitle) return Message.warning('没有输入文章标题哦！(๑´ڡ`๑) ')
     if(!articleText) return Message.warning('没有输入文章内容哦！(๑´ڡ`๑) ')
 
-    axios('/api/editArticle',{articleText,titleImg,articleTitle,tagId} ).then( dt => {
+    let simpleText = entryInput.textContent.substring(0,80)+'...'
+
+    axios('/api/editArticle',{articleText,titleImg,articleTitle,tagId,simpleText} ).then( dt => {
        runInAction(() => {
            this.clearAll()
        })
