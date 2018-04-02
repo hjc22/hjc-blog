@@ -65,7 +65,7 @@ class Common extends Component {
         ? cs.mailShow
         : ''
     return (<div>
-      <NavMenu></NavMenu>
+      <NavMenu {...this.props}></NavMenu>
 
       <div className={cs.contentWarp}>
         <div className={cs.startTopBg}></div>

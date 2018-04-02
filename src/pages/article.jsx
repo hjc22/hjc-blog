@@ -51,7 +51,7 @@ const TextShow  = (props) => {
   const [month,day] = dateFilter(props.date)
   return (
     <div>
-      <div className={cs.monthTitle}><span className={cs.monthText}>{month}</span><span className={cs.dayText}>{day}月</span></div>
+
       <h2 className={cs.itemTitle}>{props.articleTitle}</h2>
       <div className={cs.itemHead}>
          <span className={cs.itemDate}>发表于{props.date}</span><span className={cs.itemCircle}></span>
@@ -67,7 +67,7 @@ const TextShow  = (props) => {
     </div>
   )
 }
-
+// <div className={cs.monthTitle}><span className={cs.monthText}>{month}</span><span className={cs.dayText}>{day}月</span></div>
 
 const Award = ({likeNum,qrUrls,payStatus}) => {
   let payOpen = () => {

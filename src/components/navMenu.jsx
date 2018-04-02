@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Row, Col, Popover } from 'antd';
+import { Row, Col, Popover,Icon } from 'antd';
 
 import { observer } from 'mobx-react';
 import { navMenuStore,commonStore } from '../stores'
@@ -17,8 +17,9 @@ const LoginPanel = () => (
 
 @observer
 class NavMenu extends Component {
-
    render(){
+     const { history } = this.props
+
      let val = navMenuStore.status?'anticon-close':'anticon-search',mMenuStyle =  navMenuStore.mMenuStatus?styles.mobileDropMenuOpen:styles.mobileDropMenuClose,
      { userInfo,isLogin } = commonStore,userImg = userInfo.userImg?userInfo.userImg:'https://static.hdslb.com/images/akari.jpg'
 
@@ -55,12 +56,24 @@ class NavMenu extends Component {
 
          </Row>
          <div className={styles.mobileDropMenu +' '+ mMenuStyle} >
+            <Icon type="close" className={styles.mbClose} onClick={ () => navMenuStore.mobileOpen()}/>
+            <div className={styles.mbHead}>
+              {isLogin?(
+                <span className={styles.mbUserInfo}>
+                  <img className={styles.mbUserImg} src={userImg} alt='userImg'/>
+                  <span className={styles.mbName}>{userInfo.userName}</span>
+                </span>
+            ):(<button className={styles.mbLoginBtn} onClick={() => commonStore.setLoginModal()}>注册/登录</button>)}
+            </div>
             <ul className={styles.mobileList}>
-              { navMenuStore.menus.map( item => navItem(item)) }
-              <li className={styles.navItem}>
-                <button onClick={() => commonStore.setLoginModal()}>注册/登录</button>
-              </li>
+              { navMenuStore.menus.map( item => mbNavItem(item,history)) }
+
             </ul>
+            { isLogin?(
+              <ul className={styles.loginNav}>
+                { navMenuStore.myMenu.map( item => mbNavItem(item,history)) }
+              </ul>
+            ):null}
 
          </div>
        </div>
@@ -73,6 +86,12 @@ class NavMenu extends Component {
 const navItem  = ( props ) => (
   <li key={props.name} className={styles.navItem}>
     <NavLink to={props.path} className={styles.navLink} activeClassName={styles.active}>{props.name}</NavLink>
+  </li>
+)
+
+const mbNavItem  = ( props,history ) => (
+  <li key={props.name} className={styles.mbNavItem} onClick={() => navMenuStore.getPage(props,history,commonStore)}>
+    {props.name}
   </li>
 )
 

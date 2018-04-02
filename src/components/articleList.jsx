@@ -65,7 +65,7 @@ const Item  = ( props,i ) => {
   const [month,day] = dateFilter(props.date)
   return (
     <li key={i} className={cs.articleItem}>
-      <div className={cs.monthTitle}><span className={cs.monthText}>{month}</span><span className={cs.dayText}>{day}月</span></div>
+
       <h2 className={cs.itemTitle}>{props.articleTitle}</h2>
       <div className={cs.itemHead}>
          <span className={cs.itemDate}>发表于 {props.date}</span><span className={cs.itemCircle}></span>
@@ -74,7 +74,7 @@ const Item  = ( props,i ) => {
          <span className={cs.autor}>{props.autor}提供</span>
       </div>
       { props.titleImg?<img src={props.titleImg} className={cs.itemImg} alt='article-img'/>:''}
-      <p className={cs.itemText}>{props.articleText}</p>
+      <p className={cs.itemText}>{props.articleText.substring(0,100)}{props.articleText.length>100?'...':''}</p>
       <div className={cs.seeBtnBox}>
         <button className={cs.itemMore}><Link to={`/article/${props.articleId}`}>阅读全文</Link></button>
       </div>
@@ -83,7 +83,7 @@ const Item  = ( props,i ) => {
   )
 }
 
-
+  // <div className={cs.monthTitle}><span className={cs.monthText}>{month}</span><span className={cs.dayText}>{day}月</span></div>
 
 
 

@@ -141,6 +141,14 @@ class NavMenuStore {
 
   ]
 
+  @observable myMenu = [
+    {name:'通知',path:'/message'},
+    {name:'设置',path:'/mySetting'},
+    {name:'退出',type:'fn',fn:(commonStore) => {
+      commonStore.logout()
+    }},
+  ]
+
   @observable status = false
   @observable mMenuStatus = false
 
@@ -151,6 +159,13 @@ class NavMenuStore {
 
   @action mobileOpen(){
     this.mMenuStatus = !this.mMenuStatus
+  }
+
+  @action getPage(item,history,commonStore){
+
+    this.mMenuStatus = false
+    if(item.type === 'fn') return item.fn(commonStore)
+    history.push(item.path)
   }
 }
 
