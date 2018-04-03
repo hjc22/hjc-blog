@@ -557,7 +557,22 @@ class ArticleStore {
       data.senderName = sender.userName
     }
 
+    axios('/api/setComment',data).then( dt => {
+      runInAction(() => {
 
+        if(!type) this.commentData.commentsList.push(dt)
+
+        else {
+          let index = this.commentData.commentsList.findIndex(item => item.commentId === type)
+          if(index!==-1) this.commentData.commentsList[index].replyList.push(dt)
+
+        }
+        this.commentText = ''
+        input.value = null
+
+        this.activeCommentId = ''
+      })
+    })
   }
   @action getComment(page = 1,id){
     id = id || this.infos.articleId
