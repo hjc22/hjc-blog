@@ -14,12 +14,16 @@ class Article extends Component {
     document.body.scrollTop = document.documentElement.scrollTop = 0
     articleStore.init(this.props.match.params.id)
   }
+  setLike(params){
+     const {articleId,isLike} = articleStore.infos
+     commonStore.setLike({articleId},isLike).then(() => articleStore.setLikeNum(1))
+  }
   render() {
     const { infos,activeCommentId,loading,isNull,isError,commentData } = articleStore
     let { isLogin } = commonStore
 
 
-    let { payQrs={},likeNum,prevArticle = {},nextArticle = {},payStatus } = infos,
+    let { payQrs={},likeNum,prevArticle = {},nextArticle = {},payStatus,articleId,isLike } = infos,
         {jobPersons,commentNum,commentsList = []} = commentData
 
     return (
@@ -29,7 +33,7 @@ class Article extends Component {
 
             <Loading loading={loading} isNull={isNull} isError={isError}>
                 <TextShow {...infos}/>
-                <Award likeNum={likeNum} qrUrls={payQrs} payStatus={articleStore.payStatus}/>
+                <Award likeNum={likeNum} qrUrls={payQrs} payStatus={articleStore.payStatus} articleId={articleId} isLike={isLike} setLike={this.setLike}/>
                 <PrevNextArticle prev={prevArticle} next={nextArticle}/>
                 <Comments store={articleStore} jobPersons={jobPersons} commentNum={commentNum} commentsList={commentsList} activeCommentId={activeCommentId} isLogin={isLogin}/>
             </Loading>
@@ -69,7 +73,7 @@ const TextShow  = (props) => {
 }
 // <div className={cs.monthTitle}><span className={cs.monthText}>{month}</span><span className={cs.dayText}>{day}月</span></div>
 
-const Award = ({likeNum,qrUrls,payStatus}) => {
+const Award = ({likeNum,qrUrls,payStatus,articleId,setLike}) => {
   let payOpen = () => {
 
   }
@@ -90,7 +94,7 @@ const Award = ({likeNum,qrUrls,payStatus}) => {
           <span className={cs.menuArrow}></span>
         </div>
       </button>
-      <button className={cs.likeBtn}><Icon type="like" className={cs.likeIcon}/><span className={cs.likeNum}>{likeNumFilter(likeNum)}</span></button>
+      <button className={cs.likeBtn} onClick={() => setLike()}><Icon type="like" className={cs.likeIcon}/><span className={cs.likeNum}>{likeNumFilter(likeNum)}</span></button>
     </div>
 
 )}

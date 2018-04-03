@@ -113,6 +113,17 @@ class CommStore {
       })
     })
   }
+
+  @action setLike(params,isLike){
+    return new Promise((resolve,reject) => {
+      if(!this.userInfo) return reject(false),Message.warning('尚未登录')
+      if(isLike) return reject(false),Message.warning('你已点赞过了')
+
+      axios('/api/setLike',params).then( dt => {
+        resolve()
+      })
+    })
+  }
 }
 
 function checkInput(type,userName,password,email){
@@ -525,6 +536,10 @@ class ArticleStore {
   }
   @action setSender(info){
     this.sender = info
+  }
+  @action setLikeNum(num){
+    this.infos.likeNum += num
+    this.infos.isLike = 1
   }
   @action setText(text){
 
