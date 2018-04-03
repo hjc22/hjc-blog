@@ -4,24 +4,47 @@ import { PageNav,Comments,Loading } from '../components'
 import { articleStore,commonStore } from '../stores'
 import { observer } from 'mobx-react';
 import { Link,withRouter } from 'react-router-dom'
-import { dateFilter,likeNumFilter } from '../utils'
-import { Icon } from 'antd'
-
+import { dateFilter,likeNumFilter,toTop } from '../utils'
+import { Icon,Pagination } from 'antd'
+import queryString from 'query-string'
 
 @observer
 class Article extends Component {
   componentDidMount(){
     document.body.scrollTop = document.documentElement.scrollTop = 0
-    articleStore.init(this.props.match.params.id)
+    const id = this.props.match.params.id
+    articleStore.init(id)
+
+    let p = parseInt(queryString.parse(this.props.location.search).p || 1)
+
+
+    articleStore.getComment(p,id)
   }
   setLike(params){
      const {articleId,isLike} = articleStore.infos
      commonStore.setLike({articleId},isLike).then(() => articleStore.setLikeNum(1))
   }
-  render() {
-    const { infos,activeCommentId,loading,isNull,isError,commentData } = articleStore
-    let { isLogin } = commonStore
+  getChange(p){
 
+    const {history,match,location} = this.props
+
+    let query = queryString.parse(location.search)
+
+    query.p = p
+
+    let qs = '?'+queryString.stringify(query)
+
+
+
+    setTimeout(()=>{
+
+      this.props.history.push(match.url+qs)
+    },0)
+
+  }
+  render() {
+    const { infos,activeCommentId,loading,isNull,isError,commentData,totalPage } = articleStore
+    let { isLogin } = commonStore
 
     let { payQrs={},likeNum,prevArticle = {},nextArticle = {},payStatus,articleId,isLike } = infos,
         {jobPersons,commentNum,commentsList = []} = commentData
@@ -32,10 +55,13 @@ class Article extends Component {
           <div className={cs.articleItem}>
 
             <Loading loading={loading} isNull={isNull} isError={isError}>
-                <TextShow {...infos}/>
+                <TextShow {...infos} commentNum={totalPage}/>
                 <Award likeNum={likeNum} qrUrls={payQrs} payStatus={articleStore.payStatus} articleId={articleId} isLike={isLike} setLike={this.setLike}/>
                 <PrevNextArticle prev={prevArticle} next={nextArticle}/>
-                <Comments store={articleStore} jobPersons={jobPersons} commentNum={commentNum} commentsList={commentsList} activeCommentId={activeCommentId} isLogin={isLogin}/>
+                <Comments store={articleStore} commentNum={totalPage} commentsList={commentsList} activeCommentId={activeCommentId} isLogin={isLogin}/>
+                <div className={cs.pagination}>
+                  <Pagination current={articleStore.nowPage} pageSize={10} total={articleStore.totalPage} onChange={(p) => this.getChange(p)}/>
+                </div>
             </Loading>
           </div>
 

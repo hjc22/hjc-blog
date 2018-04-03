@@ -13,7 +13,7 @@ import { Icon } from 'antd';
 class AllComments extends Component{
   render(){
 
-    let {commentNum,jobPersons,commentsList,activeCommentId,isLogin,store,type} = this.props
+    let {commentNum,commentsList,activeCommentId,isLogin,store,type} = this.props
     let inputShow = activeCommentId !== ''?'hide':''
 
     let idName = type===1?'boardId':'commentId'
@@ -25,7 +25,7 @@ class AllComments extends Component{
               <div className={cs.commentHead}>
                 <h4 className={cs.headTit}>全部评论</h4>
                 <div className={cs.headRight}>
-                  <span><span className={cs.commentNum}>{jobPersons}</span>人参与</span>，<span><span className={cs.commentNum}>{commentNum}</span>条评论</span>
+                  <span><span className={cs.commentNum}>{commentNum}</span>条评论</span>
                 </div>
 
               </div>

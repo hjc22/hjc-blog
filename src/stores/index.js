@@ -515,6 +515,9 @@ class ArticleStore {
 
   @observable sender = {}
 
+  @observable nowPage = 1
+  @observable totalPage = 0
+
   @action open(){
     this.payStatus = !this.payStatus
   }
@@ -523,16 +526,13 @@ class ArticleStore {
     this.activeCommentId = id
   }
 
-  @action init(id){
+  @action init(id,p){
     getLoading(this,'/api/queryArticle',{articleId:id},{method:'get'}).then( dt => {
        this.infos = dt
+
     })
 
-    axios('/api/getComment',{articleId:id},{method:'get'}).then( dt => {
-       runInAction(() => {
-         this.commentData.commentsList = dt
-       })
-    })
+
   }
   @action setSender(info){
     this.sender = info
@@ -557,21 +557,16 @@ class ArticleStore {
       data.senderName = sender.userName
     }
 
-    axios('/api/setComment',data).then( dt => {
-      runInAction(() => {
 
-        if(!type) this.commentData.commentsList.push(dt)
-
-        else {
-          let index = this.commentData.commentsList.findIndex(item => item.commentId === type)
-          if(index!==-1) this.commentData.commentsList[index].replyList.push(dt)
-
-        }
-        this.commentText = ''
-        input.value = null
-
-        this.activeCommentId = ''
-      })
+  }
+  @action getComment(page = 1,id){
+    id = id || this.infos.articleId
+    axios('/api/getComment',{articleId:id,page},{method:'get'}).then( dt => {
+       runInAction(() => {
+         this.commentData.commentsList = dt.list
+         this.nowPage = page
+         this.totalPage = dt.allCount
+       })
     })
   }
 
