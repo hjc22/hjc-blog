@@ -19,6 +19,15 @@ const clss = cls => {
   return cls.join(' ')
 }
 
+const runTime = time => {
+  if(!time) return ''
+
+  const nowTime = +new Date(),chaTime = nowTime - time
+
+
+  return Math.floor(chaTime / (1000 * 60 * 60 * 24))
+}
+
 const axios = (url,data = {},opts = {}) => {
    return new Promise((resolve,reject) => {
      let { method = 'post',load = true ,headers,isAlert = true} = opts
@@ -71,5 +80,6 @@ export {
   axios,
   clss,
   toTop,
-  createLoading
+  createLoading,
+  runTime
 }

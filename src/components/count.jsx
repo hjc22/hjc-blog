@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import { countStore } from '../stores'
 import cs from '../assets/css/count.css'
 import { ModuleTitle,Loading } from '../components'
-
+import { runTime } from '../utils'
 @observer
 class Count extends Component {
    componentDidMount(){
@@ -33,7 +33,7 @@ class Count extends Component {
 const Item = (props,i) => (
   <li className={cs.countItem} key={i}>
     <span>{props.type}</span>
-    <span>{String(props.num) + props.unit}</span>
+    <span>{props.type=='运行时间'?runTime(props.num):String(props.num)}{props.unit}</span>
   </li>
 )
 
