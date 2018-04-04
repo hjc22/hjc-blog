@@ -560,7 +560,7 @@ class ArticleStore {
     axios('/api/setComment',data).then( dt => {
       runInAction(() => {
 
-        if(!type) this.commentData.commentsList.push(dt)
+        if(!type) this.commentData.commentsList.push(dt),this.totalPage++
 
         else {
           let index = this.commentData.commentsList.findIndex(item => item.commentId === type)
