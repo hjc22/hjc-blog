@@ -144,3 +144,9 @@
   flex:1;
   justify-content: space-between;
 }
+
+:global .musicMenus{
+  height: 400px;
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
+}

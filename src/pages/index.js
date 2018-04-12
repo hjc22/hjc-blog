@@ -9,6 +9,7 @@ import MessagePage from './message'
 import MessageBoard from './messageBoard'
 import Tag from './tag'
 import About from './about'
+import Edit2 from './edit2'
 export {
   Index,
   Order,
@@ -20,5 +21,6 @@ export {
   MessagePage,
   MessageBoard,
   Tag,
-  About
+  About,
+  Edit2
 }

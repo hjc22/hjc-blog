@@ -19,11 +19,19 @@ class Setting extends Component {
     return (
       <div className={cs.mySetting}>
          <div className={cs.settingHead}>
-           <div className={cs.userImgBox}><img src={userImg} alt="userImg"/></div>
+           <div className={cs.userImgBox}><img src={userImg} alt="userImg"/>
+             <div className={cs.iconBg}>
+               <Icon type="camera-o" className={cs.setImgIcon} />
+               <input type='file' className={cs.imgInput} onChange={ e => commonStore.setUserImg(e)}></input>
+             </div>
+           </div>
            <span className={cs.userName}>{userInfo.userName}</span>
          </div>
          <div>
            <h4 className={cs.settingTitle}>账户管理</h4>
+           <ul className={cs.settingList}>
+             <li className={cs.settingItem}>更换头像</li>
+           </ul>
          </div>
       </div>
 

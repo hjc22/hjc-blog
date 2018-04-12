@@ -16,8 +16,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #0cc0fb;
   border-radius: 100%;
+  position: relative;
 }
 .userImgBox img{
   width: 100%;
@@ -35,4 +35,38 @@
   line-height:  60px;
   margin-top: 20px;
   border-bottom: 1px solid #ececec;
+}
+.settingList{
+  margin: 20px 0;
+}
+.settingItem{
+  border-bottom: 1px solid #f6f4f4;
+  color:#444;
+  height: 40px;
+  line-height: 40px;
+}
+.iconBg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s;
+}
+.iconBg:active{
+  background: rgba(0,0,0,.6);
+}
+.setImgIcon{
+  color:#fff;
+  opacity: .8;
+  font-size: 40px;
+}
+.imgInput{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }

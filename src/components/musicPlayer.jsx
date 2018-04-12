@@ -84,13 +84,15 @@ const getUrl = id => `http://music.163.com/song/media/outer/url?id=${id}.mp3`
 
 
 const songList = audio => (
-    <Menu onClick={({ key }) => musicPlayerStore.pickSong(key)}>
+    <Menu onClick={({ key }) => musicPlayerStore.pickSong(key)} className='musicMenus'>
 
-      {musicPlayerStore.songs.map( (item,i) => (
-        <Menu.Item key={i}>
-          {item.name}
-        </Menu.Item>
-      ))}
+        {musicPlayerStore.songs.map( (item,i) => (
+          <Menu.Item key={i}>
+            {item.name}
+          </Menu.Item>
+        ))}
+
+
     </Menu>
   )
 

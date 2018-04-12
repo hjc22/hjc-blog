@@ -17,6 +17,10 @@ const LoginPanel = () => (
 
 @observer
 class NavMenu extends Component {
+    handleVisibleChange = (visible) => {
+      console.log(visible)
+       navMenuStore.modalVisible = visible
+    }
    render(){
      const { history } = this.props
 
@@ -39,7 +43,7 @@ class NavMenu extends Component {
               <span className={styles.regLoginbtn} >
                 {
                   isLogin?(<span className={styles.userInfo}>
-                    <Popover placement="bottomRight" title={userInfo.userName} content={LoginPanel()} trigger="hover">
+                    <Popover placement="bottomRight" title={userInfo.userName} content={LoginPanel()} trigger="hover" onVisibleChange={this.handleVisibleChange} visible={navMenuStore.modalVisible}>
                        <img className={styles.userImg} src={userImg} alt='userImg'/>
                     </Popover></span>
 

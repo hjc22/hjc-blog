@@ -15,7 +15,8 @@ import {
   MessagePage,
   MessageBoard,
   Tag,
-  About
+  About,
+  Edit2
 } from './pages'
 import {commonStore} from './stores'
 
@@ -44,6 +45,7 @@ class App extends Component {
         <Route exact path='/login' component={Login}/>
         <Route exact path='/error' component={ErrorPage}/>
         <Route exact path='/edit' component={Edit}/>
+        <Route exact path='/edit2' component={Edit2}/>
         <Route path='/' component={Common}/>
       </Switch>
       <FooterBar/>

@@ -7,6 +7,7 @@ class MySettingStore {
   @action init(page = 1){
 
   }
+  
 }
 
 

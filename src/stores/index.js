@@ -124,6 +124,33 @@ class CommStore {
       })
     })
   }
+
+  @action setUserImg(e){
+    let form = new FormData(),file = e.target.files[0]
+
+    form.append('img',file)
+
+    // this.titleImgloading = true
+
+    axios('/api/uploadPhoto',form,{ headers:{'Content-Type':'multipart/form-data'} } ).then( dt => {
+
+      console.log(dt)
+       runInAction(() => {
+          this.myUserInfo.userImg = dt
+       })
+
+       // input.value = null
+    })
+    .catch( err => {
+
+      // runInAction(() => {
+      //   this.titleImgloading = false
+      // })
+      // input.value = null
+      Message.error(err)
+    })
+
+  }
 }
 
 function checkInput(type,userName,password,email){
@@ -160,6 +187,8 @@ class NavMenuStore {
     }},
   ]
 
+  @observable modalVisible = false
+
   @observable status = false
   @observable mMenuStatus = false
 
@@ -175,6 +204,7 @@ class NavMenuStore {
   @action getPage(item,history,commonStore){
 
     this.mMenuStatus = false
+    this.modalVisible = false
     if(item.type === 'fn') return item.fn(commonStore)
     history.push(item.path)
   }
