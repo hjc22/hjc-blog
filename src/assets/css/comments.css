@@ -195,6 +195,7 @@
 .commentSubmitBox{
   display: flex;
   align-items: center;
+  order:2;
 }
 
 .smallBtns{
@@ -216,4 +217,17 @@
 }
 .smallInputBtns{
   padding: 10px 0;
+}
+
+.commentBox{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.commentList{
+  order:2;
+}
+.commentBoard{
+  order:1;
+  margin-top: 20px;
 }

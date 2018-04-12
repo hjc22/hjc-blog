@@ -14,7 +14,8 @@ class AllComments extends Component{
   render(){
 
     let {commentNum,commentsList,activeCommentId,isLogin,store,type} = this.props
-    let inputShow = activeCommentId !== ''?'hide':''
+    let inputShow = activeCommentId !== ''?'hide':'',
+        getBoard = type === 1?cs.commentBoard:''
 
     let idName = type===1?'boardId':'commentId'
 
@@ -34,17 +35,19 @@ class AllComments extends Component{
 
           {isLogin?null:(<h5 className={cs.loginAlert}>要发表{type===1?'留言':'评论'}或者回复，您必须<span onClick={() => commonStore.setLoginModal()} className={cs.loginBtn}>登录</span></h5>)}
 
+          <div className={cs.commentBox}>
+            <ul className={cs.commentList}>
+              {commentsList.map( (item,i) => commentItem(item,i,store,idName,isLogin))}
+            </ul>
 
-          <ul className={cs.commentList}>
-            {commentsList.map( (item,i) => commentItem(item,i,store,idName,isLogin))}
-          </ul>
+            {
+              isLogin?(<div className={cs.commentSubmitBox+' '+inputShow + ' '+getBoard}>
+                <textarea className={cs.replyInput} onInput={e => store.setText(e.target.value)} type='text' placeholder={type===1?'写下你的留言...':'写下你的评论...'} onClick={() => store.setCommentId('')} ref='commentInput'></textarea>
+                <button  className={cs.commentBtn} onClick={() => store.setComment(this.refs.commentInput)}>{type===1?'留言':'评论'}</button>
+              </div>):null
+            }
+          </div>
 
-          {
-            isLogin?(<div className={cs.commentSubmitBox+' '+inputShow}>
-              <textarea className={cs.replyInput} onInput={e => store.setText(e.target.value)} type='text' placeholder={type===1?'写下你的留言...':'写下你的评论...'} onClick={() => store.setCommentId('')} ref='commentInput'></textarea>
-              <button  className={cs.commentBtn} onClick={() => store.setComment(this.refs.commentInput)}>{type===1?'留言':'评论'}</button>
-            </div>):null
-          }
 
 
 

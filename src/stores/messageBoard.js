@@ -33,7 +33,7 @@ class MessageBoard {
     axios('/api/setMessageBoard',data).then( dt => {
       runInAction(() => {
 
-        if(!type) this.list.push(dt)
+        if(!type) this.list.unshift(dt)
 
         else {
           let index = this.list.findIndex(item => item.boardId === type)
