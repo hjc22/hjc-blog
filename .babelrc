@@ -2,6 +2,7 @@
   "presets": ["react-native-stage-0/decorator-support"],
   "plugins": [
     ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }],
+    "syntax-dynamic-import"
 
   ]
 }

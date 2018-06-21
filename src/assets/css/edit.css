@@ -271,3 +271,7 @@ pre{
 pre span{
   word-break: break-word;
 }
+:global .public-DraftEditor-content{
+  min-height: 400px;
+  padding: 20px 0;
+}
