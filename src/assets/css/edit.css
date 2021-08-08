@@ -1,5 +1,6 @@
-
-
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .header{
   /* padding-left: 14px; */
   height:60px;
@@ -45,8 +46,8 @@
   margin-top: 20px;
 }
 .rightBtn.btnActive{
-  border-color: #0cc0fb;
-  color:#0cc0fb;
+  border-color: var(--my-background-color);
+  color:var(--my-background-color);
 }
 .titleImgBox{
   margin: 30px 0 30px;

@@ -1,3 +1,6 @@
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .nearComments{
 
   width: 100%;
@@ -21,7 +24,7 @@
 
 }
 .nameCol{
-  color:#0cc0fb;
+  color:var(--my-background-color);
 }
 .itemTop{
   display: flex;

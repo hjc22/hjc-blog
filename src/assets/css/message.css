@@ -1,4 +1,7 @@
 
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .message{
   composes: modulePanel from global;
   min-height: 400px;
@@ -20,5 +23,5 @@
   justify-content: flex-end;
   padding: 5px 0 0;
   font-size: 13px;
-  color:#0cc0fb;
+  color: var(--my-background-color);
 }

@@ -216,7 +216,7 @@ class MusicPlayerStore {
       id:'28406753',
       name:'义气',
       album:{
-        picUrl:'http://p1.music.126.net/Nl0RTYfKGynZsS89SKpjdQ==/3385396303311359.jpg'
+        picUrl:'http://p0.meituan.net/scarlett/a13fa2b69f44fe3b62bcd4523ee23956234858.jpg'
       },
       artists:[
         { name:'黄海波' },{ name:'王雷' },{ name:'李健' },{ name:'张宁江' },
@@ -276,7 +276,6 @@ class MusicPlayerStore {
     setTimeout(() => this.audio.play())
   }
   @action getMute(audio){
-
     this.muted = !this.muted
     this.audio.muted = !this.muted
   }
@@ -393,9 +392,9 @@ class CountStore {
 
 class SwiperStore {
   @observable list = [
-    {imgUrl:'http://p1.music.126.net/SWDOrvO3f6L8Q1xGPTbb6w==/109951163102543599.jpg?param=700y260',title:'',id:'',type:''},
-    {imgUrl:'http://p1.music.126.net/SWDOrvO3f6L8Q1xGPTbb6w==/109951163102543599.jpg?param=700y260',title:'',id:'',type:''},
-    {imgUrl:'http://p1.music.126.net/SWDOrvO3f6L8Q1xGPTbb6w==/109951163102543599.jpg?param=700y260',title:'',id:'',type:''},
+    {imgUrl:'http://p0.meituan.net/scarlett/ee55f89f2289160e09c1f0f42701734a80142.jpg',title:'',id:'',type:''},
+    {imgUrl:'http://p0.meituan.net/scarlett/89912fe2c426f643c0162068ffd58ec2486960.png',title:'',id:'',type:''},
+    {imgUrl:'http://p0.meituan.net/scarlett/ee55f89f2289160e09c1f0f42701734a80142.jpg',title:'',id:'',type:''},
 
   ]
 }

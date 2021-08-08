@@ -17,8 +17,8 @@ class FooterBar extends Component {
        <div className={cs.footerBar}>
           <p>博客已运行{runTime(countStore.list[1]?countStore.list[1].num:'--')}天</p>
           <p>托管于阿里云</p>
-          <p>Made with by hjc</p>
-          <p><a href='https://github.com/hjc22' target='_blank'><Icon type="github" className={cs.github}/></a></p>
+          <p>Made by lxf</p>
+          <p><a href='https://github.com/lxiafei' target='_blank'><Icon type="github" className={cs.github}/></a></p>
        </div>
      )
    }

@@ -1,4 +1,6 @@
-
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .articlesWrap{
 
 }
@@ -37,7 +39,7 @@
   height: 28px;
   border-radius: 30px;
   width: 100px;
-  background:#0cc0fb;
+  background:var(--my-background-color);
   color: #fff;
   font-size: 13px;
   transition: all .3s;

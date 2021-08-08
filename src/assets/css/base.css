@@ -1,3 +1,6 @@
+:root {
+  --my-background-color: #7e3c7e94;
+}
 ul,li{
   list-style: none;
 }
@@ -17,7 +20,7 @@ a{
 }
 
 .backupIcon{
-  background: #0cc0fb;
+  background: var(--my-background-color);
   border-radius: 100%;
   width: 50px;
   height: 50px;
@@ -31,11 +34,11 @@ a{
   opacity: .6;
 }
 :global .globalColor {
-  color: #0cc0fb;
+  color: var(--my-background-color);
 }
 
 :global .globalBg {
-  background-color: #0cc0fb;
+  background-color: var(--my-background-color);
 }
 :global .globalTitle {
    color:#2d2e30;
@@ -46,7 +49,7 @@ a{
 
 :global .globalSeeMore {
    text-align: center;
-   color:#0cc0fb;
+   color:var(--my-background-color);
 }
 :global .globalSeeMore button{
   background: none;
@@ -69,20 +72,26 @@ a{
 .contentWarp{
   position: relative;
   overflow: hidden;
-  background-color: #0064c6;
+  /* background-color: #c9c8c0bd; */
+  background-color: #7e6189;
+  /* background-image: linear-gradient(180deg, #c6c0c9c2 5%, #7e3c7e94 100%); */
+  background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fd.zdqx.com%2Fxswsd_20190809%2F007.jpg&refer=http%3A%2F%2Fd.zdqx.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1631025836&t=89ab2fc0f30985ac342dd549732c3f7b');
+  background-repeat: repeat;
 }
 .startTopBg{
   position: absolute;
   top:0;
   width: 100%;
   height: 950px;
-  background: url(../images/start_top_bg_02.jpg) 50% 50% / cover no-repeat;
+  /* background: url(../images/start_top_bg_02.jpg) 50% 50% / cover no-repeat; */
+  /* background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fd.zdqx.com%2Fxswsd_20190809%2F007.jpg&refer=http%3A%2F%2Fd.zdqx.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1631025836&t=89ab2fc0f30985ac342dd549732c3f7b') 50% 50% / cover repeat; */
+  
   /* background-attachment:fixed */
 }
 
 /* :global(.ant-pagination-prev:focus .ant-pagination-item-link, .ant-pagination-next:focus .ant-pagination-item-link, .ant-pagination-prev:hover .ant-pagination-item-link, .ant-pagination-next:hover .ant-pagination-item-link) {
-  color:#0cc0fb;
-  border-color: #0cc0fb;
+  color:var(--my-background-color);
+  border-color: var(--my-background-color);
 
 } */
 
@@ -90,11 +99,11 @@ a{
   border-radius: 100%!important;
 }
 :global .ant-pagination-item-active{
-  color:#0cc0fb!important;
-  border-color: #0cc0fb!important;
+  color:var(--my-background-color)!important;
+  border-color: var(--my-background-color)!important;
 }
 :global .ant-pagination-item-active a{
-  color:#0cc0fb!important;
+  color:var(--my-background-color)!important;
 }
 :global .ant-pagination-item-link{
   border-radius: 100%!important;
@@ -153,7 +162,7 @@ a{
 
 .loginBtnBox button{
   height: 36px;
-  background: #0cc0fb;
+  background: var(--my-background-color);
   width: 100%;
   color: #fff;
   margin-top: 30px;
@@ -166,7 +175,7 @@ a{
   padding: 30px 10px 0;
 }
 .regBtn{
-  color:#0cc0fb;
+  color:var(--my-background-color);
 }
 
 .mailInput{

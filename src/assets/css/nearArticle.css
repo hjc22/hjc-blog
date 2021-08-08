@@ -1,3 +1,6 @@
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .hotArticles{
 
   width: 100%;
@@ -52,7 +55,7 @@
   align-items: center;
   color: #fff;
   border-radius: 3px;
-  background: #0cc0fb;
+  background: var(--my-background-color);
   vertical-align: middle;
 }
 .artItem:nth-child(1) .itemIndex,.artItem:nth-child(2) .itemIndex,.artItem:nth-child(3) .itemIndex{

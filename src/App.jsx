@@ -103,7 +103,6 @@ class Common extends Component {
               }} className={cs.startRight}>
               <Switch>
                 <Route exact path='/index' component={withRouter(Index)}></Route>
-
                 <Redirect exact from='/' to='/index'></Redirect>
                 <Route exact path='/article/:id' component={withRouter(Article)}></Route>
                 <Route exact path='/tag' component={withRouter(Tag)}></Route>

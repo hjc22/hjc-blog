@@ -1,3 +1,6 @@
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .tagList{
   composes: modulePanel from global;
   /* min-height: 400px; */
@@ -21,7 +24,7 @@
   margin: 10px 0;
 }
 .tagItem.active{
-  background: #0cc0fb;
+  background: var(--my-background-color);
   color:#fff;
   border-radius: 4px;
   display: flex;

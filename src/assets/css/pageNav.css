@@ -1,4 +1,6 @@
-
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .pageNav{
   background: #fff;
   padding: 14px 3%;
@@ -7,7 +9,7 @@
 }
 
 .itemNav{
-  color:#0cc0fb;
+  color:var(--my-background-color);
 }
 
 .itemNav:last-child{

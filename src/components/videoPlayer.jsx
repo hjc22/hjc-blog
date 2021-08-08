@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 // import { Row, Col } from 'antd';
 import styles from '../assets/css/videoPlayer.css'
 
-
 class VideoPlayer extends Component {
    render(){
      return (
@@ -12,7 +11,5 @@ class VideoPlayer extends Component {
      )
    }
 }
-
-
 
 export default VideoPlayer

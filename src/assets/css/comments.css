@@ -1,3 +1,6 @@
+:root {
+  --my-background-color: #7e3c7e94;
+}
 .nearArticle{
   color: #777;
   margin:20px 0 36px;
@@ -23,7 +26,7 @@
   font-weight: bold;
 }
 .commentNum{
-  color:#0cc0fb;
+  color: var(--my-background-color);
   font-size: 14px;
   font-weight: bold;
   margin-right: 4px;
@@ -43,7 +46,7 @@
 
 }
 .loginBtn{
-  color: #0cc0fb;
+  color: var(--my-background-color);
   cursor: pointer;
 }
 
@@ -78,7 +81,7 @@
 
 }
 .comItemName{
-  color:#0cc0fb;
+  color:var(--my-background-color);
   flex:1;
   display: inline-flex;
   align-items: center;
@@ -100,7 +103,7 @@
   height: 20px;
   min-width: 62px;
   border-radius: 20px;
-  border: 1px solid #0cc0fb;
+  border: 1px solid var(--my-background-color);
   margin-left: 3%;
   line-height: 1;
   position: relative;
@@ -118,7 +121,7 @@
   border-radius: 100%;
   width: 19px;
   height: 19px;
-  background: #0cc0fb;
+  background: var(--my-background-color);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +162,7 @@
 
 .replyInput:focus{
   background: #fff;
-  outline: 1px solid #0cc0fb;
+  outline: 1px solid var(--my-background-color);
 }
 .replyIconStyle{
   font-size: 14px;
@@ -177,7 +180,7 @@
   margin-top: 14px;
 }
 .commentBtn{
-  background: #0cc0fb;
+  background: var(--my-background-color);
   width: 50px;
   height: 28px;
   border-radius: 2px;

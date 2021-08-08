@@ -34,7 +34,7 @@ class NavMenu extends Component {
      return (
        <div>
          <Row type="flex" justify="center" align='middle' className={styles.navWrap}>
-           <Col lg={{ span: 2 }} md={{span:3}} xs={{span:11}} className={styles.logo}>HJC博客</Col>
+           <Col lg={{ span: 2 }} md={{span:3}} xs={{span:11}} className={styles.logo}>LXF博客</Col>
            <Col lg={{ span: 14 }} md={{span:19}} xs={{span:11}} className={styles.navRight} >
               <ul className={styles.navList}>
                 { navMenuStore.menus.map( item => navItem(item)) }
