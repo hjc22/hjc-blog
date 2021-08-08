@@ -25,7 +25,7 @@ class About extends Component {
            <h4 className={cs.contentTit}>时间线</h4>
            <Timeline className={cs.timelineBox}>
               <Timeline.Item color='#0cc0fb'>上线时间 2019-07-16 历时3个月</Timeline.Item>
-              <Timeline.Item color='#0cc0fb'>开发于 2019-04-16</Timeline.Item>
+              <Timeline.Item color='#0cc0fb'>开发于 2019-04-08</Timeline.Item>
             </Timeline>
          </div>
          <div className={cs.aboutShow}>
